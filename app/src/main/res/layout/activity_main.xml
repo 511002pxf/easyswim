@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/framr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+
+        <RadioButton
+            android:id="@+id/rb_pool"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/st_pool"
+            android:gravity="center"
+            android:text="泳池"
+            android:textColor="@drawable/st_text_color"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_map"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="地图"
+            android:textColor="@drawable/st_text_color"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/st_map">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_rank"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="排行"
+            android:textColor="@drawable/st_text_color"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/st_rank">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_main"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="我的"
+            android:textColor="@drawable/st_text_color"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/st_main">
+        </RadioButton>
+
+    </RadioGroup>
+</LinearLayout>

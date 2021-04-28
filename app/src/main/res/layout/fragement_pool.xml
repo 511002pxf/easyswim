@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <RelativeLayout
+       android:padding="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="@color/app_main">
+      <TextView
+          android:id="@+id/tv_area"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_centerVertical="true"
+          android:textColor="@color/app_write"
+          android:textSize="@dimen/large_size"
+          android:paddingHorizontal="10dp"
+          android:gravity="center_vertical"
+          android:text="全部"/>
+      <RelativeLayout
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:layout_width="220dp"
+          android:layout_height="match_parent"
+          android:layout_centerInParent="true">
+         <EditText
+             android:paddingHorizontal="30dp"
+             android:singleLine="true"
+             android:ellipsize="end"
+             android:gravity="center"
+             android:hint="输入泳池的名称"
+             android:textColor="@color/text1"
+             android:id="@+id/ed_search"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/bg_search"
+             android:layout_marginVertical="8dp"
+             android:textSize="@dimen/normal_size" />
+         <ImageView
+             android:layout_marginLeft="8dp"
+             android:layout_centerVertical="true"
+             android:src="@mipmap/ic_search"
+             android:layout_width="20dp"
+             android:layout_height="20dp"/>
+      </RelativeLayout>
+      <ImageView
+          android:id="@+id/iv_sort"
+          android:scaleType="centerInside"
+          android:layout_alignParentRight="true"
+          android:src="@mipmap/ic_sort"
+          android:layout_width="50dp"
+          android:layout_height="match_parent"/>
+   </RelativeLayout>
+   <com.scwang.smart.refresh.layout.SmartRefreshLayout
+       android:id="@+id/smart_refresh"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <com.scwang.smart.refresh.header.ClassicsHeader
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+      </com.scwang.smart.refresh.header.ClassicsHeader>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycler"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+      </androidx.recyclerview.widget.RecyclerView>
+
+      <com.scwang.smart.refresh.footer.ClassicsFooter
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+      </com.scwang.smart.refresh.footer.ClassicsFooter>
+
+   </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>
